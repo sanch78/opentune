@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opentune"
+version = "0.1.0.dev0"
+description = "Speaker matching: Windows routing feasibility prototype"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "numpy==2.5.4",
+    "PySide6-Essentials==6.10.3",
+    "sounddevice==0.5.6",
+]
+
+[project.scripts]
+opentune = "opentune.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

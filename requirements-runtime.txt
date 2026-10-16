@@ -1,0 +1,8 @@
+# Prototype runtime and transitive Python dependencies; Python 3.12 baseline.
+# PortAudio/Qt native payloads retain their upstream licenses.
+numpy==2.5.4
+PySide6-Essentials==6.10.3
+shiboken6==6.10.3
+sounddevice==0.5.6
+cffi==2.1.1
+pycparser==3.11

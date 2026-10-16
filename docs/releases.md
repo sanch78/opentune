@@ -2,8 +2,9 @@
 
 ## Current state
 
-There is no application version or release artifact yet. Repository CI validates
-documentation and infrastructure only. No packaging or publishing workflow runs.
+The source-only routing prototype is versioned `0.1.0.dev0`; no release artifacts
+or installers are published. CI validates documentation and offscreen prototype
+tests with fake audio devices. No packaging or publishing workflow runs.
 
 ## Proposed application packaging
 

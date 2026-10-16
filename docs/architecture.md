@@ -1,6 +1,6 @@
 # Architecture
 
-Status: accepted direction, before implementation. See [ADR 0001](decisions/0001-initial-architecture.md).
+Status: accepted direction; first routing slice implemented. See [ADR 0001](decisions/0001-initial-architecture.md).
 
 ## Product boundary
 
@@ -29,7 +29,11 @@ See [upstream references](references.md).
 
 ## Module boundaries
 
-These are planned responsibilities, not existing packages or public APIs.
+These are responsibility boundaries, not a stable public API. Currently
+`signals.py` implements a bounded identification tone, `audio.py` provides device
+discovery/format probes/playback, and `ui.py` orchestrates those actions in Qt workers.
+The CLI can enumerate devices without importing Qt. No acoustic estimation,
+correction backend, microphone compensation, or session persistence exists yet.
 
 | Module | Owns | Must not own |
 | --- | --- | --- |

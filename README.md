@@ -8,7 +8,7 @@ proprietary software or mandatory professional measurement equipment.
 
 ## Project status
 
-**Architecture and repository preparation. No application is available yet.**
+**Phase 2: device discovery and channel-check prototype. Not a calibration release.**
 
 The first release will focus on reducing repeatable left/right response
 differences at the listening position. It will not identify the intrinsic
@@ -17,7 +17,13 @@ from an uncalibrated microphone.
 
 The agreed stack is Python, PySide6, NumPy/SciPy, and sounddevice/PortAudio.
 Windows correction will use an explicit Equalizer APO integration. These are
-design decisions; hardware compatibility has not yet been demonstrated.
+design decisions. Device discovery and silent format probes have run on Windows;
+audible routing and correction have not yet been verified.
+
+Run the prototype with `python -m opentune` after following the
+[development setup](docs/development.md). It never plays audio automatically.
+`python -m opentune devices` enumerates devices without playback or recording.
+The [routing experiment guide](docs/prototype.md) describes the first manual checks.
 
 ## Planned first experience
 
@@ -34,7 +40,7 @@ project home; no standalone website is planned.
 
 | Platform | Planned scope | Current validation |
 | --- | --- | --- |
-| Windows | First measurement and matching MVP; Equalizer APO | Not hardware tested |
+| Windows | Discovery and channel-check prototype; future Equalizer APO | Discovery/format probe only; listening check pending |
 | Linux | First-class target; PipeWire correction adapter | Not implemented or hardware tested |
 | macOS | Portable core and future native integration | Community Testing Required |
 
@@ -51,6 +57,8 @@ playback, ASIO, and encoded passthrough are outside that initial promise.
 - [Feasibility gates and roadmap](docs/roadmap.md)
 - [Validation strategy](docs/testing.md)
 - [Development setup](docs/development.md)
+- [Routing prototype and manual checks](docs/prototype.md)
+- [Prototype dependency inventory](docs/dependencies.md)
 - [Release and dependency strategy](docs/releases.md)
 - [Upstream references](docs/references.md)
 
@@ -61,8 +69,9 @@ accessibility, translations, and usability are welcome. Read
 [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
 Public code, documentation, and initial UI text use English.
 
-Repository checks currently validate documentation links and GitHub YAML, not
-application behavior or audio compatibility. See the development guide to run them.
+Repository checks validate documentation and GitHub YAML. Headless prototype tests
+cover signal limits, stream lifecycle, failure handling, and GUI controls using
+fake devices. They do not establish physical audio compatibility.
 
 ## License
 

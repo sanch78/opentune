@@ -8,8 +8,15 @@ structure. It does not check external URLs, Markdown anchor targets, audio behav
 or GitHub's complete server-side workflow schema. The CI matrix runs the same check
 on Windows, Linux, and macOS with Python 3.12.
 
-There are no application tests yet because there is no application. A successful
-repository check is not evidence of DSP accuracy or platform compatibility.
+`python -m pytest -q` now exercises the first routing slice: digital signal limits,
+ramps and channel isolation, explicit endpoint/shared-mode selection, stale device
+rejection, unsupported formats, stream failure cleanup, cancellation, and Qt GUI
+gating. Every test uses synthetic data or fake devices. The Qt platform is offscreen;
+CI never plays audio or records a microphone. A successful test is not evidence of
+acoustic accuracy or physical platform compatibility.
+
+See [prototype evidence and manual checks](prototype.md) for the separate Windows
+enumeration and silent format observations. Gates A, B, and C remain incomplete.
 
 ## Tests required as implementation arrives
 

@@ -6,13 +6,17 @@ recorded settings, evidence, limitations, and a decision to proceed or revise.
 ## Phase 1: Architecture and infrastructure
 
 Accepted: Python/PySide6, explicit Equalizer APO integration, and matching at the
-listening position. This milestone supplies architecture, contribution documents,
-GitHub templates, repository CI, and development/release plans. It contains no
-application implementation or runtime dependencies.
+listening position. This completed milestone supplied architecture, contribution
+documents, GitHub templates, repository CI, and development/release plans.
 
 ## Phase 2: Routing and measurement prototype
 
 ### Gate A: Windows route
+
+In progress: a [device-discovery and quiet channel-check slice](prototype.md) is
+implemented. Windows device enumeration and silent format support were checked
+locally. Audible channel mapping, Equalizer APO processing/bypass, reconnect, and
+restoration remain unverified. Gate A is not complete.
 
 Prove independent channel processing and bypass on the reference HDMI endpoint.
 Verify fresh captures through the actual output path and test endpoint loss and

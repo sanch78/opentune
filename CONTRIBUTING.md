@@ -7,8 +7,8 @@ Thank you for helping make speaker calibration accessible.
 Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), and
 [accepted decisions](docs/decisions/0001-initial-architecture.md). Discuss major
 architecture, algorithms, dependencies, and platform changes in an issue first.
-The current milestone prepares the repository; application implementation follows
-the agreed feasibility gates.
+The current milestone starts device discovery and channel checking; further
+measurement and correction implementation follows the agreed feasibility gates.
 
 ## Workflow
 

@@ -1,2 +1,3 @@
-# Repository validation only; application dependencies are not installed yet.
+# Repository validation and headless prototype tests.
 PyYAML==6.0.3
+pytest==9.1.1
