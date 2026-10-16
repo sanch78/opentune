@@ -1,0 +1,23 @@
+name: Feature or design proposal
+description: Suggest an improvement or discuss a design decision.
+title: "[Proposal]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User need
+      description: Who needs this, and what problem would it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal and alternatives
+      description: Describe the behavior, alternatives, and effect on the matching MVP.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and uncertainty
+      description: Include primary references, licensing concerns, and experiments needed.

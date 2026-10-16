@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible problem with documentation or future application behavior.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "OpenTune is currently in architecture preparation. Do not post private recordings or identifying device metadata."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and reproduction
+      description: What happened, what did you expect, and how can it be reproduced?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: For audio issues include OS, versions, input/output models, route, sample rate, and correction backend. Otherwise say not applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Sanitized logs, screenshots, repeatability observations, and relevant settings. Distinguish measurements from predictions.

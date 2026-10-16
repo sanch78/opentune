@@ -1,0 +1,2 @@
+# Repository validation only; application dependencies are not installed yet.
+PyYAML==6.0.3

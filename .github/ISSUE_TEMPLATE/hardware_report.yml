@@ -1,0 +1,25 @@
+name: Hardware compatibility report
+description: Document a tested audio route, including failures and limitations.
+title: "[Hardware]: "
+body:
+  - type: textarea
+    id: setup
+    attributes:
+      label: Hardware and software setup
+      description: OS and versions, microphone/model and input, output/driver, complete route, backend, rate, and channel configuration. Omit serial numbers.
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: Procedure and results
+      description: Describe channel checks, repeated captures, correction verification, bypass, and reconnect tests. State what was not tested.
+    validations:
+      required: true
+  - type: textarea
+    id: calibration
+    attributes:
+      label: Calibration and limitations
+      description: Calibration provenance, orientation, input processing, noise/clipping, synchronization, and repeatability evidence.
+    validations:
+      required: true
